@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --bro-green: #18d26e;
+}
+
+* {
+    font-family: 'Montserrat';
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.nav-link {
+    color: white;
+    font-size: smaller;
+    font-weight: bold;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+nav a:hover,
+section#slider:hover ~ nav a[href="#slider"],
+section#tentang:hover ~ nav a[href="#tentang"],
+section#portfolio:hover ~ nav a[href="#portfolio"],
+section#tim:hover ~ nav a[href="#tim"],
+section#hubungi:hover ~ nav a[href="#hubungi"] {
+    color: var(--bro-green) !important;
+}
+
+.img-carousel {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+.bg-dark-40 {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.bg-dark-80 {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.bg-dark-90 {
+    background-color: rgba(0, 0, 0, .9);
+}
+
+.bg-dark-100 {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#tentang {
+    position: relative;
+}
+
+#tentang > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .05;
+    object-fit: cover;
+    width: 100%;
+    z-index: -1;
+}
+
+.text-bro-green {
+    color: var(--bro-green);
+}
+
+.btn-bro-green {
+    background-color: white;
+}
+
+.btn-bro-green:hover,
+.btn-bro-green.active {
+    background-color: var(--bro-green);
+    color: white;
+}
+
+.card-img-icon {
+    background-color: var(--bro-green);
+    border: 3px solid white;
+    border-radius: 50%;
+    height: 60px;
+    margin: -25px auto 0 auto;
+    text-align: center;
+    width: 60px;
+}
+
+.card-img-icon h1 {
+    margin-top: 6px;
+}
+
+.img-testimonial {
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+}
+
+.form-control:focus {
+    border: 2px solid var(--bro-green);
+    box-shadow: none;
+}
+
+.footer-icon-items button {
+    height: 48px;
+    width: 48px;
+}
+
+.btn-subscribe {
+    background-color: var(--bro-green);
+    color: white;
+}
+
+.btn-subscribe:hover {
+    background-color: #14ab5a;
+    color: white;
+}
+
+.btn-subscribe:focus {
+    box-shadow: none;
+}
+
+.footer-title {
+    margin: 0;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.footer-title:before {
+    background: linear-gradient(to right, var(--bro-green) 70px, #aaa 50px);
+    position: absolute;
+    height: 2px;
+    content: '';
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.section-title {
+    margin: 0;
+    padding-bottom: 10px;
+    position: relative;
+    width: 150px;
+    border-top: 4px solid #eee;
+}
+
+.section-title:before {
+    background: var(--bro-green);
+    position: absolute;
+    height: 4px;
+    content: '';
+    top: -4px;
+    right: 50px;
+    left: 50px;
+}
+
+.carousel-indicators.testimonial li {
+    background-color: #aaa;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+}
+
+.carousel-indicators.testimonial li.active {
+    background-color: var(--bro-green);
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+}
+
+.carousel-control-width {
+    width: 5%;
+}
+
+.carousel-caption {
+    right: 5%;
+    left: 5%;
+}
+
+.img-card-portfolio {
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+#back-to-top {
+    opacity: 0;
+    padding: 6px 12px !important;
+    transition: all .3s ease-in-out;
+}
+
+#back-to-top.show {
+    opacity: 1;
+}
+
+.tim {
+    position: relative;
+}
+
+.img-tim {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.tim:hover .tim-overlay {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.tim:hover .tim-overlay-content {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tim-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100%;
+    width: 91%;
+    top: 0;
+    transition: all .1s ease-in-out;
+}
+
+.tim-overlay-content {
+    color: white;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all .1s ease-in-out;
+}
+
+#modal-portfolio .modal-content {
+    background: none;
+    border: none;
+}
+
+#modal-portfolio .modal-body {
+    background: white;
+}
+
+#modal-portfolio .modal-footer {
+    background: none;
+    border: none;
+    color: white;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    height: 240px;
+    width: 100%;
+    top: 0;
+    transition: all .1s ease-in-out;
+}
+
+.portfolio-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-overlay:hover .portfolio-overlay-content {
+    opacity: 1;
+}
+
+.portfolio-overlay-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+    opacity: 0;
+    transition: all .1s ease-in-out;
+}
+
+.portfolio-overlay-content .ion {
+    cursor: pointer;
+}
